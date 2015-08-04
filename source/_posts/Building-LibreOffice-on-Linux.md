@@ -5,6 +5,16 @@ tags:
 
 ---
 项目比较大，编译时间比较长。建议代码放在至少有30G剩余空间的磁盘位置。
+# 更新系统（重要）
+先更新系统，以防装了编译环境后系统出现问题。
+在Debian/Ubuntu中：
+
+    sudo apt-get update
+    sudo apt-get dist-upgrade
+在Fedora中：
+
+    su -c 'yum update'
+
 # 编译环境
 最简单的方式使用系统提供的编译支持进行环境配置。
 在Debian/Ubuntu中：
@@ -12,7 +22,7 @@ tags:
     $ sudo apt-get build-dep libreoffice
 在Fedora中：
 
-    $ sudo yum-builddep libreoffice
+    $ su -c 'yum-builddep libreoffice'
 # 配置和编译
 简单编译可以使用：
 
@@ -46,11 +56,13 @@ tags:
     $ apt-cache search ccache #查找相应的包
     
     $ sudo apt-get install ccache #安装相应的包
+    
 在Fedora中：
 
-    $ yum search ccache #查找相应的包
+    $ su -c 'yum search ccache' #查找相应的包
     
-    $ yum install ccache #安装相应的包
+    $ su -c 'yum install ccache' #安装相应的包
+    
 装好后默认就可以使用了。建议做如下配置：
 
     $ ccache --max-size 32G #修改ccache使用32G的缓存空间
@@ -69,7 +81,6 @@ tags:
 客户端程序默认就启动了守护程序，如果没有启动可以直接执行：
 
     $ iceccd -d
-
 
 
 
