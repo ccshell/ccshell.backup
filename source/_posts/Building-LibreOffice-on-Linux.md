@@ -33,13 +33,11 @@ tags:
     $ make #编译
 推荐使用如下命令进行配置：
 
-    $ ./autogen.sh --disable-report-builder --disable-vba --disable-odk \
-    --disable-opengl --disable-opencl --disable-dbus --disable-sdremote \
-    --disable-sdremote-bluetooth --disable-tdeab --disable-firebird-sdbc \
-    --disable-randr --disable-postgresql-sdbc --disable-lotuswordpro \
-    --disable-collada --disable-scripting-beanshell --disable-kdeab \
-    --with-lang=zh-CN --without-java --without-help \
-    --disable-gstreamer-0-10 
+    $ ./autogen.sh --disable-tdeab \
+    --disable-kdeab --disable-postgresql-sdbc \
+    --disable-firebird-sdbc --with-lang=zh-CN \
+    --enable-gstreamer --disable-gstreamer-0-10 \
+    --enable-dbgutil
 可以将如上代码放入脚本文件中。
 可以使用：
 
@@ -63,12 +61,17 @@ tags:
     
     $ su -c 'yum install ccache' #安装相应的包
     
-装好后默认就可以使用了。建议做如下配置：
+装好后默认就可以使用了。可做如下配置
+修改ccach缓存路径(在用户的.bashrc中添加):
 
-    $ ccache --max-size 32G #修改ccache使用32G的缓存空间
-如果磁盘空间紧张可以启用ccache的压缩缓存。在用户的.bashrc中添加：
+    $export CCACHE_DIR=/data/ccache_data #
+如果磁盘空间紧张可以启用ccache的压缩缓存：
 
     $ export CCACHE_COMPRESS=1
+修改ccache使用32G的缓存空间:
+
+    $ ccache --max-size 32G #
+
 用**Icecream做分布式编译**，需要有多台机器可以访问，且需要一台机器做服务器（做调度）。Libreoffice对Icecream做了内建支持，使用系统库中的包就可以装好icecream。只需要在配置时./autogen.sh后再附加上：
 
     --enable-icecream
