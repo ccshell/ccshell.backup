@@ -36,8 +36,7 @@ tags:
     $ ./autogen.sh --disable-tdeab \
     --disable-kdeab --disable-postgresql-sdbc \
     --disable-firebird-sdbc --with-lang=zh-CN \
-    --enable-gstreamer --disable-gstreamer-0-10 \
-    --enable-dbgutil
+    --enable-gstreamer --disable-gstreamer-0-10 
 可以将如上代码放入脚本文件中。
 可以使用：
 
