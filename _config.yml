@@ -69,5 +69,5 @@ theme: yilia
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/ccshell/ccshell.github.io
+  repository: https://github.com/ccsheller/ccshell.github.io
   branch: master
