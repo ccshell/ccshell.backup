@@ -10,4 +10,4 @@ tags:
 部门使用hg做的版本控制，今天写了个shell脚本。
 脚本默认输出当前分支，当前hg配置的用户所做的修改
 
-代码[hgmodified.sh](https://github.com/ccshell/Snippets/tree/master/shell)
+代码[hgmodified.sh](https://github.com/ccsheller/Snippets/tree/master/shell)

@@ -7,6 +7,6 @@ tags:
 
 ---
 
-代码[Observer](https://github.com/ccshell/Snippets/tree/master/observer)
+代码[Observer](https://github.com/ccsheller/Snippets/tree/master/observer)
 
 欢迎提出建议。
